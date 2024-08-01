@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en' data-theme='%s'>
+<head>
+    <title>Pico Webserver!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+</head>
+<body>
+    <header class='container text-center'>
+        <h1>Pico Webserver V1</h1>
+        <p>Hello World!</p>
+        <nav>
+        <ul>
+            <li><strong>index.html</strong></li>
+        </ul>
+        <ul>
+            <li>
+            <details class="dropdown">
+                <summary>
+                Dark / Light Mode
+                </summary>
+                <ul dir="rtl">
+                <li><a href="#" id='light_btn' >Light</a></li>
+                <li><a href="#" id='dark_btn' >Dark</a></li>
+                </ul>
+            </details>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+</main>
+</body>
+<script>
+    document.getElementById('light_btn').onclick = function() {changeMode('light')};
+    document.getElementById('dark_btn').onclick = function() {changeMode('dark')};
+    
+    function changeMode(mode){
+        var htmlTag = document.documentElement;
+        htmlTag.setAttribute('data-theme', mode);
+        console.log('New theme set:', mode)
+    }
+</script>
+</html>
