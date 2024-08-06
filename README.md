@@ -1,5 +1,5 @@
-# Micropython-Pi-Pico-Projects
-A place to put some little python Projects.
+# Micropython Pi Pico Web Server
+Welcome to yet another Pi Pico Web Server.
 </br>
 ## Pi Pico Webserver
 A webserver made with Micropython for Pi Pico W boards. It can handle requests and serve files over http. In the future i want to expand this into serveral servers such as ones for: http, https and a multithreaded server / versions of them.
