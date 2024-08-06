@@ -3,6 +3,10 @@ A place to put some little python Projects.
 </br>
 ## Pi Pico Webserver
 A webserver made with Micropython for Pi Pico W boards. It can handle requests and serve files over http. In the future i want to expand this into serveral servers such as ones for: http, https and a multithreaded server / versions of them.
+#### Version 1.1
+ - Settings.ini support. Now allows the user to add their Wifi and webserver settings without having to change the pico_webserver.py (Allows the program to be used with mpy-cross!)
+ - Added in some garbage collection.
+ - Set WIFI powermode to full power. Improves request response times massively! (Maybe will be a setting in the ini soon. Trades power usage of the WIFI chip for improved networking capability.)
 #### Version 1
  - Basic file and folder support
  - Favicon support, please use small favicons as they stay loaded in the memory, this speeds up  the browser request for it.
