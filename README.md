@@ -7,6 +7,7 @@ A webserver made with Micropython for Pi Pico W boards. It can handle requests a
  - Auto update RTC on Wifi Connect.
  - SD Card support via the 'sdcard.py'. -- https://github.com/micropython/micropython-lib/tree/master/micropython/drivers/storage/sdcard
  - Updated web_server.ini
+ - More graceful error handling.
  - https support soon...
 #### Version 1.1
  - Settings.ini support. Now allows the user to add their Wifi and webserver settings without having to change the pico_webserver.py (Allows the program to be used with mpy-cross!)
