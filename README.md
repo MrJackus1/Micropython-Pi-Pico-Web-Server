@@ -2,7 +2,7 @@
 A fast webserver for Pi Pico W running Micropython. HTTPs support!
 </br>
 ## Pi Pico Webserver
-A webserver made with Micropython for Pi Pico W boards. It can handle requests and serve: files, .js, .css, etc over http. In the future i want to expand this into serveral servers such as ones for: http, https and a multithreaded server / versions of them.
+A webserver made with Micropython for Pi Pico W boards. It can handle requests and serve: files, .js, .css, etc over http and https. In the future i want to expand this into serveral servers such as ones for: http, https and a multithreaded server / versions of them.
 ### How to install and run Pi Pico Webserver
 - Use V1.5 if you want HTTPs. I have included a certificate and a key. You should generate your own using 'openssl'. Place the two .DER files in the root of your pico or the root of the SD.
 - Open web_server.ini in notepad and edit the contents with your setup requirements. SD card doesnt have to be filled out if set to false. SDcard support is optional. If you want to use it please download 'sdcard.py' from the repository below. Copy the sdcard.py to the root of your pico, or build a custom Micropython build and add it in. Edit the .ini so that sdcard is set to true and you tell the server what pins it is connected to.
