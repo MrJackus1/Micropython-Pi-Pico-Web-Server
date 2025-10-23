@@ -390,8 +390,9 @@ def main():
     try: 
         global settings 
         settings = load_ini_file('web_server.ini')
+        CertsKeys = loadHttpCerts(settings['certificates'], settings['key'], settings['sd'])
     except OSError as ose:
-        print(f'''Error in loading the settings ini. Please check you have 'web_server.ini' in the root of your Pico!''')
+        print(f'''Error in loading the settings ini or the certificates. Please check you have 'web_server.ini' and/or your key.DER and certificate.DER. Place them in the root of your Pico!''')
         print('Stopping Server.')
         sys.exit()
     print('Settings loaded.')
@@ -401,5 +402,6 @@ def main():
     start_webserver(start_time, settings['working_folder'], settings['server_ip'], settings['port'], CertsKeys[0], CertsKeys[1], settings['sd'])
     print('Server stopped.')
     sys.exit() 
+
 
 main()
